@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Linearstar.Windows.RawInput;
-using Linearstar.Windows.RawInput.Native;
 
 namespace RawInputSharpUnity.Example
 {
@@ -9,6 +8,8 @@ namespace RawInputSharpUnity.Example
     {
         [SerializeField] private LogToUi logToUi = null;
 
+        private int _count = 0;
+
         private void Start()
         {
             GetComponent<MouseRawInput>().ReceiveRawInputMouseData += OnReceiveMouseData;
@@ -16,13 +17,11 @@ namespace RawInputSharpUnity.Example
 
         private void OnReceiveMouseData(RawInputMouseData data)
         {
-            // var m = data.Mouse;
-            // if (!m.Buttons.HasFlag(RawMouseButtonFlags.MiddleButtonDown))
-            // {
-            //     logToUi.AddLog(
-            //         $"Mouse: {data.Device.ProductName}, flag={m.Flags}, buttons={m.Buttons}, X={m.LastX}, Y={m.LastY}"
-            //     );
-            // }
+            _count++;
+            var mouse = data.Mouse;
+            logToUi.AddLog(
+                $"Mouse: {_count}, flags={mouse.Flags}, x={mouse.LastX}, y={mouse.LastY}, buttons={mouse.Buttons}"
+                );
         }
     }
 }

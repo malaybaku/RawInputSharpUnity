@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  maxLines: 20
+  maxLines: 30
 --- !u!1 &5869293218503216314
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,19 +21,25 @@ Unity 2018.4 or newer.
 
 The project in this repository is created by 2018.4.13f1.
 
-## Install by unitypackage
+## Install
 
-Install unitypackage in release.
+Easier way is to download unitypackage in releases.
 
-## Install from source
+If you want to use from source code: 
 
-Clone this repository and open in Unity Editor.
+1. Clone this repository and open in Unity Editor.
+2. Unzip `RawInput.Sharp` nupkg file on [NuGet Package](https://www.nuget.org/packages/RawInput.Sharp/).
+3. Import `/lib/netstandard1.1/RawInput.Sharp.dll` into the project.
 
-Unzip `RawInput.Sharp` nupkg file on [NuGet Package](https://www.nuget.org/packages/RawInput.Sharp/).
+## To Use other devices than keyboard / mouse
 
-Import `/lib/netstandard1.1/RawInput.Sharp.dll` into the project.
+`HidRawInput` class can handle events from generic device other than keyboard and mouse.
 
-That's it!
+You can use it with almost same manner as `KeyboardRawInput` or `MouseRawInput` component.
+
+## Known Issue
+
+- Program might crash if you try to get mouse device productname when mouse middle button is down ( #1 ).
 
 ## License
 

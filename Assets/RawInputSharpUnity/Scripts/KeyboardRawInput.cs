@@ -26,8 +26,8 @@ namespace RawInputSharpUnity
             RawInputDevice.RegisterDevice(
                 HidUsageAndPage.Keyboard, 
                 readWhenBackground 
-                    ? RawInputDeviceFlags.InputSink | RawInputDeviceFlags.NoLegacy
-                    : RawInputDeviceFlags.NoLegacy,  
+                    ? RawInputDeviceFlags.InputSink | RawInputDeviceFlags.None
+                    : RawInputDeviceFlags.None,
                 WinApiUtils.GetUnityWindowHandle()
             );            
 #endif
