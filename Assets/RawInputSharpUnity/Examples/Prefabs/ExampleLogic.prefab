@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5869293217841430426}
   - component: {fileID: 5869293217841430427}
+  - component: {fileID: 1828620257881688911}
   m_Layer: 0
   m_Name: ExampleLogic
   m_TagString: Untagged
@@ -47,6 +48,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   maxLines: 30
+--- !u!114 &1828620257881688911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869293217841430437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cae583492a83e64ca40bc497e70c36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logToUi: {fileID: 5869293217841430427}
 --- !u!1 &5869293218503216314
 GameObject:
   m_ObjectHideFlags: 0

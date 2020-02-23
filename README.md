@@ -37,9 +37,9 @@ If you want to use from source code:
 
 You can use it with almost same manner as `KeyboardRawInput` or `MouseRawInput` component.
 
-## Known Issue
+## Known issue
 
-- Program might crash if you try to get mouse device productname when mouse middle button is down ( #1 ).
+Event delay issue ( #2 ). 
 
 ## License
 
