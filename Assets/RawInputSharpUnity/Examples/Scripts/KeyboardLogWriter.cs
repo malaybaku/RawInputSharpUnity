@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Windows.Forms;
+using UnityEngine;
 using Linearstar.Windows.RawInput;
 
 namespace RawInputSharpUnity.Example
@@ -15,8 +16,9 @@ namespace RawInputSharpUnity.Example
 
         private void OnReceiveKeyboardData(RawInputKeyboardData data)
         {
+            Keys key = (Keys) data.Keyboard.VirutalKey;
             logToUi.AddLog(
-                $"Keyboard: {data.Device.ProductName}, keyCode={data.Keyboard.VirutalKey}, flag={data.Keyboard.Flags}"
+                $"Keyboard: {data.Device.ProductName}, keyCode={data.Keyboard.VirutalKey}, key={key}, flag={data.Keyboard.Flags}"
             );
         }
     }
